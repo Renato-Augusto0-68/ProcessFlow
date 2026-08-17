@@ -25,6 +25,9 @@ int main(){
             if (strcmp(compare,"show")==0){
                 show_task(t);
             }
+            if (strcmp(compare,"run")==0){
+                run_task(t);
+            }
 
             if (strcmp(compare,"exit")==0){
                 exit(1);

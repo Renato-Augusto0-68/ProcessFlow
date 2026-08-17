@@ -15,6 +15,7 @@ void limpar(void) {
 typedef struct task{
     char nome [60];
     char programa[60];
+    char argumentos [60];
     struct task *next;
 }task;
 
@@ -26,6 +27,8 @@ void add_task(struct task **head, char **save){
         strcpy(aux->nome,parc);
         char *parc2 = strtok_r(NULL," \n",save);
         strcpy(aux->programa,parc2);
+        char *parc3 = strtok_r(NULL," \n",save);
+        strcpy(aux->argumentos,parc3);
         aux->next=NULL;
         *head = aux;
     }else{
@@ -33,6 +36,8 @@ void add_task(struct task **head, char **save){
         strcpy(aux->nome,parc);
         char *parc2 = strtok_r(NULL," \n",save);
         strcpy(aux->programa,parc2);
+        char *parc3 = strtok_r(NULL," \n",save);
+        strcpy(aux->argumentos,parc3);
         aux->next=NULL;
         struct task *head_aux = *head;
         while(head_aux->next!=NULL){
@@ -46,7 +51,7 @@ void show_task(struct task *head){
     if (head!=NULL){
         struct task *aux=head;
         while(aux!=NULL){
-            printf("%s %s\n",aux->nome,aux->programa);
+            printf("%s %s %s\n",aux->nome,aux->programa, aux->argumentos);
             aux=aux->next;
         }
     }else{
@@ -54,3 +59,8 @@ void show_task(struct task *head){
     }
 }
 
+void run_task(struct task **head){
+    task *aux = *head;
+
+    int resp = execvp(aux->programa,aux->argumentos);
+}
