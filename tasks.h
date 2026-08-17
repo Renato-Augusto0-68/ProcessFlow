@@ -5,4 +5,6 @@ void limpar(void);
 
 void add_task(struct task **head, char **save);
 
+void show_task(struct task *head);
+
 #endif

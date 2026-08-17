@@ -363,4 +363,253 @@ make: *** [Makefile:8: run] Segmentation fault (core dumped)
 [?2004lbash: ./a.out: No such file or directory
 [?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ./main.o
 [?2004lbash: ./main.o: Permission denied
-[?2004h]0;devcontainers@PcdeRe28: ~/dev/
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clean
+[?2004lCommand 'clean' not found, did you mean:
+  command 'clear' from deb ncurses-bin (6.4+20240113-1ubuntu2.1)
+  command 'pclean' from deb pbuilder-scripts (22)
+  command 'uclean' from deb svn-buildpackage (0.8.8)
+  command 'lean' from deb elan (3.1.0-1ubuntu0.1)
+Try: sudo apt install <deb name>
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> te ask tese te 1
+
+processflow> show
+ 
+1 teste
+
+processflow> exit
+make: *** [Makefile:8: run] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ c[Kmake clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean[2Prun
+[?2004lgcc -c main.c
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:77:17:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kadd_task[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   77 |                 [01;35m[Kadd_task[m[K(&t,&save);
+      |                 [01;35m[K^~~~~~~~[m[K
+[01m[Kmain.c:80:17:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kshow_task[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   80 |                 [01;35m[Kshow_task[m[K(t);
+      |                 [01;35m[K^~~~~~~~~[m[K
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kadd_task[m[K’:
+[01m[Ktasks.c:21:22:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kstrtok_r[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   21 |         char *parc = [01;35m[Kstrtok_r[m[K(NULL," \n",save);
+      |                      [01;35m[K^~~~~~~~[m[K
+[01m[Ktasks.c:21:22:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+[01m[Ktasks.c:22:9:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kstrcpy[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   22 |         [01;35m[Kstrcpy[m[K(aux->nome,parc);
+      |         [01;35m[K^~~~~~[m[K
+[01m[Ktasks.c:3:1:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<string.h>[m[K’ or provide a declaration of ‘[01m[Kstrcpy[m[K’
+    2 | #include <stdlib.h>
+  +++ |+[32m[K#include <string.h>[m[K
+    3 | 
+[01m[Ktasks.c:22:9:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kstrcpy[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wbuiltin-declaration-mismatch-Wbuiltin-declaration-mismatch]8;;[m[K]
+   22 |         [01;35m[Kstrcpy[m[K(aux->nome,parc);
+      |         [01;35m[K^~~~~~[m[K
+[01m[Ktasks.c:22:9:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<string.h>[m[K’ or provide a declaration of ‘[01m[Kstrcpy[m[K’
+[01m[Ktasks.c:23:23:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   23 |         char *parc2 = [01;35m[Kstrtok_r[m[K(NULL," \n",save);
+      |                       [01;35m[K^~~~~~~~[m[K
+[01m[Ktasks.c:28:22:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   28 |         char *parc = [01;35m[Kstrtok_r[m[K(NULL," \n",save);
+      |                      [01;35m[K^~~~~~~~[m[K
+[01m[Ktasks.c:29:9:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kstrcpy[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wbuiltin-declaration-mismatch-Wbuiltin-declaration-mismatch]8;;[m[K]
+   29 |         [01;35m[Kstrcpy[m[K(aux->nome,parc);
+      |         [01;35m[K^~~~~~[m[K
+[01m[Ktasks.c:29:9:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<string.h>[m[K’ or provide a declaration of ‘[01m[Kstrcpy[m[K’
+[01m[Ktasks.c:30:23:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   30 |         char *parc2 = [01;35m[Kstrtok_r[m[K(NULL," \n",save);
+      |                       [01;35m[K^~~~~~~~[m[K
+gcc main.o functions.o -o ProcessFlow
+/usr/bin/ld: cannot find functions.o: No such file or directory
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: ProcessFlow] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+In file included from [01m[Kmain.c:6[m[K:
+[01m[Ktasks.h:6:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    6 | void add_task(struct [01;35m[Ktask[m[K **head, char **save);
+      |                      [01;35m[K^~~~[m[K
+[01m[Ktasks.h:8:23:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    8 | void show_task(struct [01;35m[Ktask[m[K *head);
+      |                       [01;35m[K^~~~[m[K
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:77:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kadd_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   77 |                 add_task([01;35m[K&t[m[K,&save);
+      |                          [01;35m[K^~[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task **[m[K
+[01m[Ktasks.h:6:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task **[m[K’
+    6 | void add_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:80:27:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kshow_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   80 |                 show_task([01;35m[Kt[m[K);
+      |                           [01;35m[K^[m[K
+      |                           [01;35m[K|[m[K
+      |                           [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:8:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task *[m[K’ but argument is of type ‘[01m[Kstruct task *[m[K’
+    8 | void show_task([01;36m[Kstruct task *head[m[K);
+      |                [01;36m[K~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:84:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kadd_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   84 |                 add_task([01;35m[K&t[m[K,&save);
+      |                          [01;35m[K^~[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task **[m[K
+[01m[Ktasks.h:6:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task **[m[K’
+    6 | void add_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+gcc -c tasks.c
+gcc main.o functions.o -o ProcessFlow
+/usr/bin/ld: cannot find functions.o: No such file or directory
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: ProcessFlow] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c tasks.c
+gcc main.o functions.o -o ProcessFlow
+/usr/bin/ld: cannot find functions.o: No such file or directory
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: ProcessFlow] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c tasks.c
+gcc main.o functions.o -o ProcessFlow
+/usr/bin/ld: cannot find functions.o: No such file or directory
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: ProcessFlow] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> t tasks teste -1
+
+processflow> show
+
+Não há nada para mostrar
+processflow> exit
+make: *** [Makefile:12: run] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clearmake run
+[?2004l./ProcessFlow
+
+processflow> te ask testes 1
+make: *** [Makefile:12: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004l./ProcessFlow
+
+processflow> task teste
+make: *** [Makefile:12: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean[2Prun
+[?2004lgcc -c main.c
+In file included from [01m[Kmain.c:6[m[K:
+[01m[Ktasks.h:6:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    6 | void add_task(struct [01;35m[Ktask[m[K **head, char **save);
+      |                      [01;35m[K^~~~[m[K
+[01m[Ktasks.h:8:23:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    8 | void show_task(struct [01;35m[Ktask[m[K *head);
+      |                       [01;35m[K^~~~[m[K
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:77:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kadd_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   77 |                 add_task([01;35m[K&t[m[K,&save);
+      |                          [01;35m[K^~[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task **[m[K
+[01m[Ktasks.h:6:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task **[m[K’
+    6 | void add_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:80:27:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kshow_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   80 |                 show_task([01;35m[Kt[m[K);
+      |                           [01;35m[K^[m[K
+      |                           [01;35m[K|[m[K
+      |                           [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:8:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task *[m[K’ but argument is of type ‘[01m[Kstruct task *[m[K’
+    8 | void show_task([01;36m[Kstruct task *head[m[K);
+      |                [01;36m[K~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:84:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kadd_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   84 |                 add_task([01;35m[K&t[m[K,&save);
+      |                          [01;35m[K^~[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task **[m[K
+[01m[Ktasks.h:6:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task **[m[K’
+    6 | void add_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+gcc -c tasks.c
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task teste
+make: *** [Makefile:12: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run[C
+[?2004l./ProcessFlow
+
+processflow> ^[[A    tsa   as  tasks teste
+
+processflow> show
+
+Não há nada para mostrar
+processflow> ^Cmake: *** [Makefile:12: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004l./ProcessFlow
+
+processflow> tasks teste te
+
+processflow> ^[[A    show
+
+Não há nada para mostrar
+processflow> show
+
+Não há nada para mostrar
+processflow> ^Cmake: *** [Makefile:12: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+In file included from [01m[Kmain.c:6[m[K:
+[01m[Ktasks.h:6:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    6 | void add_task(struct [01;35m[Ktask[m[K **head, char **save);
+      |                      [01;35m[K^~~~[m[K
+[01m[Ktasks.h:8:23:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    8 | void show_task(struct [01;35m[Ktask[m[K *head);
+      |                       [01;35m[K^~~~[m[K
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:77:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kadd_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   77 |                 add_task([01;35m[K&t[m[K,&save);
+      |                          [01;35m[K^~[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task **[m[K
+[01m[Ktasks.h:6:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task **[m[K’
+    6 | void add_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:80:27:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kshow_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   80 |                 show_task([01;35m[Kt[m[K);
+      |                           [01;35m[K^[m[K
+      |                           [01;35m[K|[m[K
+      |                           [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:8:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task *[m[K’ but argument is of type ‘[01m[Kstruct task *[m[K’
+    8 | void show_task([01;36m[Kstruct task *head[m[K);
+      |                [01;36m[K~~~~~~~~~~~~~^~~~[m[K
+gcc -c tasks.c
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task teste 1 e
+
+processflow> t r show
+teste e
+
+processflow> ^Cmake: *** [Makefile:12: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFl
