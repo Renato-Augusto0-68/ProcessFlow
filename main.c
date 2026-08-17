@@ -2,12 +2,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <functions/tasks.h>
 
-typedef struct task{
-    char nome [60];
-    char programa[60];
-    struct task *next;
-}task;
 
 
 
@@ -19,8 +15,14 @@ int main(){
         while(1){
             printf("processflow> ");
             fgets(command,sizeof(command),stdin);
-            printf("%s",command);
-            if (*command==97){
+            
+            if (*command==116){
+                
+            }
+
+
+
+            if (*command==0){
                 exit(1);
             }
         }

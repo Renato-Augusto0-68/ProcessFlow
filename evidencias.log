@@ -62,4 +62,47 @@ In file included from [01m[Kmain.c:1[m[K:
 [01m[Kmain.c:21:27:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Keof[m[K’; did you mean ‘[01m[Kfeof[m[K’? [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    21 |             fgets(command,[01;35m[Keof[m[K(command),stdin);
       |                           [01;35m[K^~~[m[K
-      |                           [32m[Kfeof[m[K
+      |                           [32m[Kfeof[m[K
+[01m[Kmain.c:23:25:[m[K [01;35m[Kwarning: [m[Kcomparison between pointer and integer
+   23 |             if (*command[01;35m[K==[m[K"exit"){
+      |                         [01;35m[K^~[m[K
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ gcc -c main.c
+[?2004l[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:21:32:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kfeof[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   21 |             fgets(command,feof([01;35m[Kcommand[m[K),stdin);
+      |                                [01;35m[K^~~~~~~[m[K
+      |                                [01;35m[K|[m[K
+      |                                [01;35m[Kchar *[m[K
+In file included from [01m[Kmain.c:1[m[K:
+[01m[K/usr/include/stdio.h:862:24:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[KFILE *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+  862 | extern int feof ([01;36m[KFILE *__stream[m[K) __THROW __wur __nonnull ((1));
+      |                  [01;36m[K~~~~~~^~~~~~~~[m[K
+[01m[Kmain.c:23:25:[m[K [01;35m[Kwarning: [m[Kcomparison between pointer and integer
+   23 |             if (*command[01;35m[K==[m[K"exit"){
+      |                         [01;35m[K^~[m[K
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ gcc -c main.c
+[?2004l[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:23:25:[m[K [01;35m[Kwarning: [m[Kcomparison between pointer and integer
+   23 |             if (*command[01;35m[K==[m[K"exit"){
+      |                         [01;35m[K^~[m[K
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ gcc -c main.c
+[?2004l[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:23:27:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   23 |             if (*command==[01;35m[K'exit'[m[K){
+      |                           [01;35m[K^~~~~~[m[K
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ gcc -c main.c
+[?2004l[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ./main
+[?2004lbash: ./main: No such file or directory
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ./main[K[K[K[Ka.out
+[?2004lbash: ./a.out: No such file or directory
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ main.o
+[?2004lmain.o: command not found
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ./main.o
+[?2004lbash: ./main.o: Permission denied
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ./main.o[2Pmain.o./a.out[1Pmaingcc -c main.c[1Pmain.c[1Pmain.c[1Pmain.c
+[?2004l[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ gcc main.c[2P./main.o[2Pmain.o./a.out
+[?2004lprocessflow> teste
+teste
+processflow> amor
+amor
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K]0;devcont
