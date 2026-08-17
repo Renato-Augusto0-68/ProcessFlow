@@ -253,4 +253,114 @@ processflow> ^Cmake: *** [Makefile:8: run] Interrupt
 [?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean[2Prun
 [?2004lgcc -c main.c
 gcc main.o -o ProcessFlow
-.
+./ProcessFlow
+
+processflow> teste de funcao
+t 0
+e 1
+s 2
+t 3
+e 4
+  5
+d 6
+e 7
+
+Task criada com sucesso
+processflow> ^[[A^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make runclean[2Prun
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> teste de funcao
+t 0
+e 1
+s 2
+t 3
+e 4
+  5
+d 6
+e 7
+  8
+f 9
+u 10
+n 11
+c 12
+a 13
+o 14
+
+ 15
+
+Task criada com sucesso
+processflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clearmake run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> teste de o coisas
+
+
+
+
+
+teste
+teste
+teste
+teste de
+teste de
+teste de
+teste de
+teste de
+teste de
+teste de
+teste de
+
+Task criada com sucesso
+processflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> teste de coisas
+
+
+Task criada com sucesso
+processflow> ^[[A^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> teste de coisas
+teste
+
+Task criada com sucesso
+processflow> make rn un^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run[3Pclearmake run[3Pclear
+[?2004l[H[2J[3J[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clearmake run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task teste ls
+^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004l./ProcessFlow
+
+processflow> task
+teste
+make: *** [Makefile:8: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ./a.out[K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ./a.out
+[?2004lbash: ./a.out: No such file or directory
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ./main.o
+[?2004lbash: ./main.o: Permission denied
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/

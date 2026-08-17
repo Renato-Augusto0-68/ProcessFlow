@@ -1,32 +1,52 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+void limpar(void) {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF) {
+    }
+}
+
 typedef struct task{
     char nome [60];
     char programa[60];
     struct task *next;
 }task;
 
-void fill_task(struct task **head){
-    struct task *aux = *head;
-    if (aux==NULL){
-        fgets(aux->nome,sizeof(aux->nome),stdin);
-        fgets(aux->programa,sizeof(aux->programa),stdin);
+void add_task(struct task **head, char **save){
+    char empt[]=" ";
+    struct task *aux = (task *)malloc(sizeof(task));
+    if (*head==NULL){
+        char *parc = strtok_r(NULL," \n",save);
+        strcpy(aux->nome,parc);
+        char *parc2 = strtok_r(NULL," \n",save);
+        strcpy(aux->programa,parc2);
         aux->next=NULL;
-        
-    else{
-        fgets(aux->nome,sizeof(aux->nome),stdin);
-        fgets(aux->programa,sizeof(aux->programa),stdin);
-    } 
-
-
+        *head = aux;
+    }else{
+        char *parc = strtok_r(NULL," \n",save);
+        strcpy(aux->nome,parc);
+        char *parc2 = strtok_r(NULL," \n",save);
+        strcpy(aux->programa,parc2);
+        aux->next=NULL;
+        struct task *head_aux = *head;
+        while(head_aux->next!=NULL){
+            head_aux=head_aux->next;
+        }
+        head_aux->next=aux;
+    }
 }
 
-
-void add_task(){
-    struct task* t1=(task *)malloc(sizeof(task));
-    
-    t1->next = NULL;
-
-
+void show_task(struct task *head){
+    if (head!=NULL){
+        struct task *aux=head;
+        while(aux!=NULL){
+            printf("%s %s\n",aux->nome,aux->programa);
+            aux=aux->next;
+        }
+    }else{
+        printf("\nNão há nada para mostrar");
+    }
 }
+
