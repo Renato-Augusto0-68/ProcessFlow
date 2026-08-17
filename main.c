@@ -13,22 +13,17 @@ typedef struct task{
 
 
 int main(){
-    if (*argv==NULL){
+    //if (*argv==NULL){
 
-
-
-
-        char *command=NULL;
+        char command[120];
         while(1){
             printf("processflow> ");
-            fgets(command,"%s",stdin);
-
-
+            fgets(command,sizeof(command),stdin);
+            printf("%s",command);
+            if (*command==97){
+                exit(1);
+            }
         }
-
-
-    }
-
-
-
+    
+    return 0;
 }
