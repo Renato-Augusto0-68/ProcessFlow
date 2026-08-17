@@ -105,4 +105,152 @@ In file included from [01m[Kmain.c:1[m[K:
 teste
 processflow> amor
 amor
-[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K]0;devcont
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ clear[K[K[K[K[Kmake run
+[?2004lMakefile:5: *** recipe commences before first target.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lMakefile:5: *** missing separator.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lMakefile:5: *** missing separator.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run[1P./a.out
+[?2004lprocessflow> t
+t
+processflow> ^C
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ./a.out
+[?2004lprocessflow> teste envio novo
+teste envio novo
+processflow> 0
+0
+processflow> 48
+48
+processflow> se  zero
+zero
+processflow> ^C
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ./a.out
+[?2004lprocessflow> teste
+teste
+processflow> teste 2
+teste 2
+processflow> ^C
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lMakefile:5: *** missing separator.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lMakefile:5: *** missing separator.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lMakefile:5: *** missing separator.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lMakefile:5: *** missing separator.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lMakefile:5: *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lMakefile:5: *** recipe commences before first target.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lMakefile:5: *** recipe commences before first target.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lMakefile:5: *** recipe commences before first target.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+processflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -rm *.o a.out ProcessFlow
+rm: invalid option -- 'm'
+Try 'rm --help' for more information.
+make: *** [Makefile:11: clean] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean[2Prun
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+processflow> teste
+testetesteTask criada com sucessoprocessflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> teste de coisas
+testeteste de coisasTask criada com sucesso
+processflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> tese   te de coisas
+teste
+teste de coisasTask criada com sucesso
+processflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> teste de coisas
+
+teste de coisasTask criada com sucesso
+processflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make runclean[2Prun
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> teste de coias
+teste de coias
+Task criada com sucesso
+processflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> teste de coisas
+teste de
+Task criada com sucesso
+processflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> tese te de coisas
+teste de
+Task criada com sucesso
+processflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make runclean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean[2Prun
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+./ProcessFlow
+
+processflow> teste de coisas
+t 0
+e 1
+s 2
+t 3
+e 4
+  5
+d 6
+e 7
+
+Task criada com sucesso
+processflow> ^Cmake: *** [Makefile:8: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make runclean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean[2Prun
+[?2004lgcc -c main.c
+gcc main.o -o ProcessFlow
+.

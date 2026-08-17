@@ -14,7 +14,10 @@ void fill_task(struct task **head){
         fgets(aux->programa,sizeof(aux->programa),stdin);
         aux->next=NULL;
         
-    else{} 
+    else{
+        fgets(aux->nome,sizeof(aux->nome),stdin);
+        fgets(aux->programa,sizeof(aux->programa),stdin);
+    } 
 
 
 }

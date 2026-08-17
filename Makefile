@@ -1,14 +1,14 @@
-ProcessFlow : main.o
-	gcc main.o -o ProcessFlow
+ProcessFlow: main.o 
+			gcc main.o -o ProcessFlow
 
-main.o = main.c
+main.o: main.c 
 	gcc -c main.c
 
 run: ProcessFlow 
 	./ProcessFlow
 
 clean: 
-		rm -f *.o ProcessFlow
+	rm -f *.o a.out ProcessFlow
 
 .PHONY: run clean
 	
