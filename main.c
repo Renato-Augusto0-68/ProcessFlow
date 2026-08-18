@@ -26,7 +26,7 @@ int main(){
                 show_task(t);
             }
             if (strcmp(compare,"run")==0){
-                run_task(t);
+                run_task(t,&save);
             }
 
             if (strcmp(compare,"exit")==0){

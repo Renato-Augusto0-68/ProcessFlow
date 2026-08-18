@@ -51,7 +51,7 @@ void show_task(struct task *head){
     if (head!=NULL){
         struct task *aux=head;
         while(aux!=NULL){
-            printf("%s %s %s\n",aux->nome,aux->programa, aux->argumentos);
+            printf("%s\n%s\n%s\n",aux->nome,aux->programa, aux->argumentos);
             aux=aux->next;
         }
     }else{
@@ -59,8 +59,11 @@ void show_task(struct task *head){
     }
 }
 
-void run_task(struct task **head){
+void run_task(struct task **head, char **save){
     task *aux = *head;
-
-    int resp = execvp(aux->programa,aux->argumentos);
+    char *parc = strtok_r(NULL," \n",save);
+    while(aux!=NULL && strcmp(aux->nome,parc)!=0){
+        aux=aux->next;
+    }
+    int resp = execlp(aux->programa,aux->argumentos);
 }

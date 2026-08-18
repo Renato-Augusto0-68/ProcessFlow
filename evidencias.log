@@ -769,4 +769,241 @@ make: *** [Makefile:12: run] Segmentation fault (core dumped)
 [?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ ^C[?2004l[?2004h[?2004l
 [?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ c[Kmake clean
 [?2004lrm -f *.o a.out ProcessFlow
-[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainersScript started on 2026-08-18 07:52:42-03:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="159" LINES="9"]
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+In file included from [01m[Kmain.c:6[m[K:
+[01m[Ktasks.h:6:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    6 | void add_task(struct [01;35m[Ktask[m[K **head, char **save);
+      |                      [01;35m[K^~~~[m[K
+[01m[Ktasks.h:8:23:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    8 | void show_task(struct [01;35m[Ktask[m[K *head);
+      |                       [01;35m[K^~~~[m[K
+[01m[Ktasks.h:10:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+   10 | void run_task(struct [01;35m[Ktask[m[K **head);
+      |                      [01;35m[K^~~~[m[K
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:23:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kadd_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   23 |                 add_task([01;35m[K&t[m[K,&save);
+      |                          [01;35m[K^~[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task **[m[K
+[01m[Ktasks.h:6:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task **[m[K’
+    6 | void add_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:26:27:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kshow_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   26 |                 show_task([01;35m[Kt[m[K);
+      |                           [01;35m[K^[m[K
+      |                           [01;35m[K|[m[K
+      |                           [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:8:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task *[m[K’ but argument is of type ‘[01m[Kstruct task *[m[K’
+    8 | void show_task([01;36m[Kstruct task *head[m[K);
+      |                [01;36m[K~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:29:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krun_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   29 |                 run_task([01;35m[Kt[m[K);
+      |                          [01;35m[K^[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:10:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task *[m[K’
+   10 | void run_task([01;36m[Kstruct task **head[m[K);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Krun_task[m[K’:
+[01m[Ktasks.c:65:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kexecvp[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   65 |     int resp = execvp(aux->programa,[01;35m[Kaux->argumentos[m[K);
+      |                                     [01;35m[K~~~^~~~~~~~~~~~[m[K
+      |                                        [01;35m[K|[m[K
+      |                                        [01;35m[Kchar *[m[K
+In file included from [01m[Ktasks.c:4[m[K:
+[01m[K/usr/include/unistd.h:599:52:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar * const*[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+  599 | extern int execvp (const char *__file, [01;36m[Kchar *const __argv[][m[K)
+      |                                        [01;36m[K~~~~~~~~~~~~^~~~~~~~[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> tasks  teste /bin/ls -a l
+
+processflow> show
+teste /bin/ls -l
+
+processflow> run
+make: *** [Makefile:12: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Krun_task[m[K’:
+[01m[Ktasks.c:65:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kexecvp[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   65 |     int resp = execvp(aux->programa,[01;35m[Kaux->argumentos[m[K);
+      |                                     [01;35m[K~~~^~~~~~~~~~~~[m[K
+      |                                        [01;35m[K|[m[K
+      |                                        [01;35m[Kchar *[m[K
+In file included from [01m[Ktasks.c:4[m[K:
+[01m[K/usr/include/unistd.h:599:52:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar * const*[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+  599 | extern int execvp (const char *__file, [01;36m[Kchar *const __argv[][m[K)
+      |                                        [01;36m[K~~~~~~~~~~~~^~~~~~~~[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task teste /bin/ls -l
+
+processflow> shw ow
+teste
+/bin/ls
+-l
+
+processflow> ^Cmake: *** [Makefile:12: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make runclean[2Prun
+[?2004lgcc -c main.c
+In file included from [01m[Kmain.c:6[m[K:
+[01m[Ktasks.h:6:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    6 | void add_task(struct [01;35m[Ktask[m[K **head, char **save);
+      |                      [01;35m[K^~~~[m[K
+[01m[Ktasks.h:8:23:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    8 | void show_task(struct [01;35m[Ktask[m[K *head);
+      |                       [01;35m[K^~~~[m[K
+[01m[Ktasks.h:10:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+   10 | void run_task(struct [01;35m[Ktask[m[K **head, char **save);
+      |                      [01;35m[K^~~~[m[K
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:23:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kadd_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   23 |                 add_task([01;35m[K&t[m[K,&save);
+      |                          [01;35m[K^~[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task **[m[K
+[01m[Ktasks.h:6:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task **[m[K’
+    6 | void add_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:26:27:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kshow_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   26 |                 show_task([01;35m[Kt[m[K);
+      |                           [01;35m[K^[m[K
+      |                           [01;35m[K|[m[K
+      |                           [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:8:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task *[m[K’ but argument is of type ‘[01m[Kstruct task *[m[K’
+    8 | void show_task([01;36m[Kstruct task *head[m[K);
+      |                [01;36m[K~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:29:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krun_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   29 |                 run_task([01;35m[Kt[m[K,&save);
+      |                          [01;35m[K^[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:10:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task *[m[K’
+   10 | void run_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Krun_task[m[K’:
+[01m[Ktasks.c:68:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kexecvp[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   68 |     int resp = execvp(aux->programa,[01;35m[Kaux->argumentos[m[K);
+      |                                     [01;35m[K~~~^~~~~~~~~~~~[m[K
+      |                                        [01;35m[K|[m[K
+      |                                        [01;35m[Kchar *[m[K
+In file included from [01m[Ktasks.c:4[m[K:
+[01m[K/usr/include/unistd.h:599:52:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar * const*[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+  599 | extern int execvp (const char *__file, [01;36m[Kchar *const __argv[][m[K)
+      |                                        [01;36m[K~~~~~~~~~~~~^~~~~~~~[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task teste /bin/ls 0l  -l
+
+processflow> show
+teste
+/bin/ls
+-l
+
+processflow> t run teste
+make: *** [Makefile:12: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ c[Kmake clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+In file included from [01m[Kmain.c:6[m[K:
+[01m[Ktasks.h:6:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    6 | void add_task(struct [01;35m[Ktask[m[K **head, char **save);
+      |                      [01;35m[K^~~~[m[K
+[01m[Ktasks.h:8:23:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    8 | void show_task(struct [01;35m[Ktask[m[K *head);
+      |                       [01;35m[K^~~~[m[K
+[01m[Ktasks.h:10:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+   10 | void run_task(struct [01;35m[Ktask[m[K **head, char **save);
+      |                      [01;35m[K^~~~[m[K
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:23:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kadd_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   23 |                 add_task([01;35m[K&t[m[K,&save);
+      |                          [01;35m[K^~[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task **[m[K
+[01m[Ktasks.h:6:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task **[m[K’
+    6 | void add_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:26:27:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kshow_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   26 |                 show_task([01;35m[Kt[m[K);
+      |                           [01;35m[K^[m[K
+      |                           [01;35m[K|[m[K
+      |                           [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:8:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task *[m[K’ but argument is of type ‘[01m[Kstruct task *[m[K’
+    8 | void show_task([01;36m[Kstruct task *head[m[K);
+      |                [01;36m[K~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:29:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krun_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   29 |                 run_task([01;35m[Kt[m[K,&save);
+      |                          [01;35m[K^[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:10:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task *[m[K’
+   10 | void run_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Krun_task[m[K’:
+[01m[Ktasks.c:68:5:[m[K [01;35m[Kwarning: [m[Knot enough variable arguments to fit a sentinel [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   68 |     [01;35m[Kint[m[K resp = execlp(aux->programa,aux->argumentos);
+      |     [01;35m[K^~~[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task teste /bin/ls -l
+
+processflow> sow
+
+processflow> show
+teste
+/bin/ls
+-l
+
+processflow> run teste
+make: *** [Makefile:12: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make c[Klean
+[?2004lmake: *** No rule to make target 'lean'.  Stop.
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+In file included from [01m[Kmain.c:6[m[K:
+[01m[Ktasks.h:6:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    6 | void add_task(struct [01;35m[Ktask[m[K **head, char **save);
+      |                      [01;35m[K^~~~[m[K
+[01m[Ktasks.h:8:23:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+    8 | void show_task(struct [01;35m[Ktask[m[K *head);
+      |                       [01;35m[K^~~~[m[K
+[01m[Ktasks.h:10:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstruct task[m[K’ declared inside parameter list will not be visible outside of this definition or declaration
+   10 | void run_task(struct [01;35m[Ktask[m[K **head, char **save);
+      |                      [01;35m[K^~~~[m[K
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:23:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kadd_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   23 |                 add_task([01;35m[K&t[m[K,&save);
+      |                          [01;35m[K^~[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task **[m[K
+[01m[Ktasks.h:6:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task **[m[K’ but argument is of type ‘[01m[Kstruct task **[m[K’
+    6 | void add_task([01;36m[Kstruct task **head[m[K, char **save);
+      |               [01;36m[K~~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:26:27:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kshow_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   26 |                 show_task([01;35m[Kt[m[K);
+      |                           [01;35m[K^[m[K
+      |                           [01;35m[K|[m[K
+      |                           [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:8:29:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kstruct task *[m[K’ but argument is of type ‘[01m[Kstruct task *[m[K’
+    8 | void show_task([01;36m[Kstruct task *head[m[K);
+      |                [01;36m[K~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.c:29:26:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Krun_task[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   29 |                 run_task([01;35m[Kt[m[K,&save);
+      |                          [01;35m[K^[m[K
+      |                          [01;35m[K|[m[K
+      |                          [01;35m[Kstruct task *[m[K
+[01m[Ktasks.h:10:29:[m[K [01;36m[Knote: [m[Kexpected ‘
