@@ -27,6 +27,8 @@ int main(){
             }
             if (strcmp(compare,"run")==0){
                 char *comp2 = strtok_r(NULL," \n",&save);
+
+                printf("%s",comp2);
                 if (strcmp(comp2,"listar")==0){
                     run_listar();
                 }else{
