@@ -1,3 +1,4 @@
+#include "task.h"
 #ifndef TASKS_H
 #define TASKS_H
 
@@ -5,9 +6,9 @@ void limpar(void);
 
 void add_task(struct task **head, char **save);
 
-void show_task(struct task *head);
+void show_task(task *head);
 
-void run_task(struct task **head, char **save);
+void run_task(task **head, char **save);
 
 void run_listar();
 

@@ -3,7 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
-
+#include "task.h"
 #include <stdlib.h>
 
 void limpar(void) {
@@ -11,13 +11,6 @@ void limpar(void) {
     while ((c = getchar()) != '\n' && c != EOF) {
     }
 }
-
-typedef struct task{
-    char nome [60];
-    char programa[60];
-    char argumentos [60];
-    struct task *next;
-}task;
 
 void add_task(struct task **head, char **save){
     char empt[]=" ";
@@ -62,12 +55,12 @@ void show_task(struct task *head){
 void run_task(struct task **head, char **save){
     task *aux = *head;
     char *parc = strtok_r(NULL," \n",save);
-    while(aux!=NULL && strcmp(aux->nome,parc)!=0){
+    while(aux->next!=NULL && strcmp(aux->nome,parc)!=0){
         aux=aux->next;
     }
     int resp = execlp(aux->programa,aux->argumentos);
 }
 
 void run_listar(){
-    int resp = execlp("/bin/ls","-l");
+    int resp = execlp("/bin/ls ","-l");
 }

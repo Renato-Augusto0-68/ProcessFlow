@@ -1,10 +1,10 @@
 ProcessFlow: main.o tasks.o
 			gcc main.o tasks.o -o ProcessFlow
 
-main.o: main.c tasks.h
+main.o: main.c tasks.h task.h
 	gcc -c main.c
 
-tasks.o: tasks.c tasks.h 
+tasks.o: tasks.c tasks.h task.h
 		gcc -c tasks.c
 
 
