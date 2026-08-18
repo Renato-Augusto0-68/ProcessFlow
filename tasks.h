@@ -9,4 +9,6 @@ void show_task(struct task *head);
 
 void run_task(struct task **head, char **save);
 
+void run_listar();
+
 #endif

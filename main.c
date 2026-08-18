@@ -26,7 +26,12 @@ int main(){
                 show_task(t);
             }
             if (strcmp(compare,"run")==0){
-                run_task(t,&save);
+                char *comp2 = strtok_r(NULL," \n",&save);
+                if (strcmp(comp2,"listar")==0){
+                    run_listar();
+                }else{
+                    run_task(&t,&save);
+                }
             }
 
             if (strcmp(compare,"exit")==0){

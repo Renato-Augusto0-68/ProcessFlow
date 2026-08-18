@@ -67,3 +67,7 @@ void run_task(struct task **head, char **save){
     }
     int resp = execlp(aux->programa,aux->argumentos);
 }
+
+void run_listar(){
+    int resp = execlp("/bin/ls","-l");
+}
