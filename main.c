@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include "tasks.h"
+#include "task.h"
 #include <stdlib.h>
 
 
@@ -12,9 +13,8 @@ int main(){
         struct task *t=NULL;
         char *save=NULL;
         char *tokn=NULL;
-      
         char command[120];
-        while(1){//apenas o commando, por enquanto
+        while(1){
             printf("\nprocessflow> ");
             fgets(command,sizeof(command),stdin);
             char *compare = strtok_r(command," \n",&save);
@@ -27,18 +27,13 @@ int main(){
             }
             if (strcmp(compare,"run")==0){
                 char *comp2 = strtok_r(NULL," \n",&save);
-
-                printf("%s",comp2);
-                if (strcmp(comp2,"listar")==0){
-                    run_listar();
-                }else{
-                    run_task(&t,&save);
-                }
+                run_task(&t,&save, comp2);
             }
 
             if (strcmp(compare,"exit")==0){
                 exit(1);
             }
+            wait(NULL);
         }
     
     return 0;

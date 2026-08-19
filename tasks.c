@@ -15,13 +15,14 @@ void limpar(void) {
 void add_task(struct task **head, char **save){
     char empt[]=" ";
     struct task *aux = (task *)malloc(sizeof(task));
+    aux->id = fork();
     if (*head==NULL){
         char *parc = strtok_r(NULL," \n",save);
         strcpy(aux->nome,parc);
         char *parc2 = strtok_r(NULL," \n",save);
         int i=0;
         while(parc2!=NULL && i < MAX_ARGS - 1){
-            
+
             aux->args[i]=strdup(parc2);
             i++;
             parc2 = strtok_r(NULL," \n",save);
@@ -54,7 +55,8 @@ void show_task(struct task *head){
     if (head!=NULL){
         struct task *aux=head;
         while(aux!=NULL){
-            printf("%s\n%s\n",aux->nome,aux->args);
+           
+            printf("Processo: %s Ação: %s PID: %d\n",aux->nome,aux->args,aux->id);
             aux=aux->next;
         }
     }else{
@@ -62,15 +64,36 @@ void show_task(struct task *head){
     }
 }
 
-void run_task(struct task **head, char **save){
+void run_task(struct task **head, char **save, char *comp){
     task *aux = *head;
-    //char *parc = strtok_r(NULL," \n",&save);
-    //if( strcmp(aux->nome,parc)==0){
 
-    int resp = execvp(aux->args[0], aux->args);
-    //}
+    if (strcmp(comp,"sequential")==0 ^ (strcmp(comp,"parallel")==0)){
+        if (strcmp(comp,"sequential")==0){
+
+        }else{
+
+        }
+
+
+    }
+    
+    if (strcmp(comp,"sequential")!=0 && (strcmp(comp,"parallel")!=0)){
+        while(aux!=NULL){
+        //ou seja aogra preciso poder mover pra onde precisa
+            if (strcmp(aux->nome, comp)==0 && aux->id==0){
+                int resp = execvp(aux->args[0], aux->args);
+            }
+            if (aux->id!=0){
+                printf("processo %s acabou\n",aux->nome);
+            }
+            aux->id=waitpid(aux->id,NULL,WNOHANG);
+            aux = aux->next;
+            
+        }
+    }
 }
 
-void run_listar(){
-    int resp = execlp("/bin/ls"," -l");
+void run_listar(char **head){
+    char *arg[] ={"/bin/ls","ls"," -l"};  
+    int resp = execvp(arg[0],arg);
 }
