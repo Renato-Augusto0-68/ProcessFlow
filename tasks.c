@@ -15,7 +15,7 @@ void limpar(void) {
 void add_task(struct task **head, char **save){
     char empt[]=" ";
     struct task *aux = (task *)malloc(sizeof(task));
-    aux->id = fork();
+    
     if (*head==NULL){
         char *parc = strtok_r(NULL," \n",save);
         strcpy(aux->nome,parc);
@@ -54,9 +54,8 @@ void add_task(struct task **head, char **save){
 void show_task(struct task *head){
     if (head!=NULL){
         struct task *aux=head;
-        while(aux!=NULL){
-           
-            printf("Processo: %s Ação: %s PID: %d\n",aux->nome,aux->args,aux->id);
+        while(aux!=NULL){      
+            printf("Processo: %s Ação: %s\n",aux->nome,aux->args);
             aux=aux->next;
         }
     }else{
@@ -69,26 +68,46 @@ void run_task(struct task **head, char **save, char *comp){
 
     if (strcmp(comp,"sequential")==0 ^ (strcmp(comp,"parallel")==0)){
         if (strcmp(comp,"sequential")==0){
-
+            while(strcmp(comp,aux->nome) && aux!=NULL){
+                aux->id = fork();
+                if (aux->id==0){
+                    execvp(aux->args[0],aux->args);
+                    exit(0);
+                }
+                aux=aux->next;
+                comp = strtok_r(NULL," \n",save);~
+                wait(NULL);
+            }
         }else{
-
+            while(strcmp(comp,aux->nome) && aux!=NULL){
+                aux->id = fork();
+                if (aux->id==0){
+                    execvp(aux->args[0],aux->args);
+                    waitpid(aux->id,NULL,WNOHANG);
+                }
+                aux=aux->next;
+                comp = strtok_r(NULL," \n",save);~
+                wait(NULL);
+            }
         }
-
-
     }
-    
+    if (strcmp(comp, "pipe")==0){
+        // a parte de pipe
+    }
     if (strcmp(comp,"sequential")!=0 && (strcmp(comp,"parallel")!=0)){
         while(aux!=NULL){
         //ou seja aogra preciso poder mover pra onde precisa
-            if (strcmp(aux->nome, comp)==0 && aux->id==0){
-                int resp = execvp(aux->args[0], aux->args);
+            if (strcmp(aux->nome, comp)==0){
+                aux->id = fork();
+                break;
             }
-            if (aux->id!=0){
-                printf("processo %s acabou\n",aux->nome);
-            }
-            aux->id=waitpid(aux->id,NULL,WNOHANG);
             aux = aux->next;
-            
+        }
+        if(aux!=NULL){
+            while(waitpid(aux->id,NULL,WNOHANG)){ int resp = execvp(aux->args[0], aux->args);}
+        }else{
+            printf("processo não existe, não é possível executar-lo\n");
+
         }
     }
 }

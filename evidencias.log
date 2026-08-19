@@ -1347,4 +1347,584 @@ processflow> show
 Processo: teste Ação: ��H�` PID: -1Processo: teste2 Ação: ��H�` PID: -1
 processflow> ^Cmake: *** [Makefile:12: run] Interrupt
 
-[?2004
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean[2Prun
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K PID: %d\n",aux->nome,[32m[Kaux->args[m[K,aux->id);
+      |                                        [01;35m[K~^[m[K                      [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                         [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K                    [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+/usr/bin/ld: main.o: in function `main':
+main.c:(.text+0x1a5): undefined reference to `work_dir'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: ProcessFlow] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K PID: %d\n",aux->nome,[32m[Kaux->args[m[K,aux->id);
+      |                                        [01;35m[K~^[m[K                      [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                         [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K                    [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+/usr/bin/ld: main.o: in function `main':
+main.c:(.text+0x1a0): undefined reference to `work_dir'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: ProcessFlow] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc main.o tasks.o -o ProcessFlow
+/usr/bin/ld: main.o: in function `main':
+main.c:(.text+0x1a0): undefined reference to `work_dir'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: ProcessFlow] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ mac[Kke clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ mal[Kke run
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K PID: %d\n",aux->nome,[32m[Kaux->args[m[K,aux->id);
+      |                                        [01;35m[K~^[m[K                      [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                         [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K                    [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+/usr/bin/ld: main.o: in function `main':
+main.c:(.text+0x1a0): undefined reference to `work_dir'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: ProcessFlow] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K PID: %d\n",aux->nome,[32m[Kaux->args[m[K,aux->id);
+      |                                        [01;35m[K~^[m[K                      [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                         [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K                    [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+/usr/bin/ld: main.o: in function `main':
+main.c:(.text+0x1a0): undefined reference to `work_dir'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: ProcessFlow] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run[Kmake run
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K PID: %d\n",aux->nome,[32m[Kaux->args[m[K,aux->id);
+      |                                        [01;35m[K~^[m[K                      [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                         [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K                    [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+/usr/bin/ld: main.o: in function `main':
+main.c:(.text+0x1a0): undefined reference to `work_dir'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: ProcessFlow] Error 1
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K PID: %d\n",aux->nome,[32m[Kaux->args[m[K,aux->id);
+  Script started on 2026-08-19 10:34:55-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="159" LINES="3"]
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004l./ProcessFlow
+
+processflow> teste     show
+
+Não há nada para mostrar
+processflow> task tet ste /bin/çs  ls
+
+processflow> run teste
+Makefile  ProcessFlow  README.md  evidencias.log  file.txt  main.c  main.o  run.c  run.h  task.h  tasks.c  tasks.h  tasks.o
+
+processflow> show teste
+Processo: teste Ação: ���/u` PID: 1811
+
+processflow> run teste
+processo teste acabou
+
+processflow> ^Cmake: *** [Makefile:12: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make runclean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean[2Prun
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K PID: %d\n",aux->nome,[32m[Kaux->args[m[K,aux->id);
+      |                                        [01;35m[K~^[m[K                      [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                         [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K                    [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task teste /bin/lss  -l
+
+processflow> run teste         task teste2 /bin/ls -a
+
+processflow> run teste2
+.  ..  .git  .gitignore  Makefile  ProcessFlow	README.md  evidencias.log  file.txt  main.c  main.o  run.c  run.h  task.h  tasks.c  tasks.h  tasks.o
+
+processflow> run teste
+total 168
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16768 Aug 19 10:48 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 102400 Aug 19 10:30 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 10:48 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2575 Aug 19 10:47 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4576 Aug 19 10:48 tasks.o
+
+processflow> run teste
+processo teste acabou
+make: *** [Makefile:12: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004l./ProcessFlow
+
+processflow> run   task teste /bin/ls -l
+
+processflow> tak sk teste3 /bin/pwd
+
+processflow> task teste2 /bin/ls -l
+
+processflow> show
+Processo: teste Ação: �C�pU PID: 0
+Processo: teste3 Ação: �C�pU PID: 0
+Processo: teste2 Ação: �C�pU PID: 0
+
+processflow> run teste2
+total 172
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16768 Aug 19 10:48 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 106496 Aug 19 10:48 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 10:48 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2575 Aug 19 10:47 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4576 Aug 19 10:48 tasks.o
+
+processflow> run teste
+total 172
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16768 Aug 19 10:48 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 106496 Aug 19 10:48 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 10:48 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2575 Aug 19 10:47 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4576 Aug 19 10:48 tasks.o
+
+processflow> show
+Processo: teste Ação: �C�pU PID: 0
+Processo: teste3 Ação: �C�pU PID: 3787
+
+processflow> run teste3
+processo teste3 acabou
+
+processflow> run   show teste      
+Processo: teste Ação: �C�pU PID: 3731
+
+processflow> run teste
+processo teste acabou
+make: *** [Makefile:12: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K PID: %d\n",aux->nome,[32m[Kaux->args[m[K,aux->id);
+      |                                        [01;35m[K~^[m[K                      [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                         [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K                    [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> run teste         task teste /bin/ls -l
+
+processflow> ru  task tete  ste2 /bin/wp  pwd
+
+processflow> task teste2 33 /bin/pwd
+
+processflow> show
+Processo: teste Ação: ��0�Z PID: 0
+Processo: teste2 Ação: ��0�Z PID: 0
+Processo: teste33 Ação: ��0�Z PID: 0
+
+processflow> run teste
+total 172
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16768 Aug 19 10:50 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 106496 Aug 19 10:48 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 10:48 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2618 Aug 19 10:49 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4632 Aug 19 10:50 tasks.o
+
+processflow> show
+Processo: teste Ação: ��0�Z PID: 0
+Processo: teste2 Ação: ��0�Z PID: 0
+Processo: teste33 Ação: ��0�Z PID: 4528
+
+processflow> run teste33
+processo teste33 acabou
+
+processflow> run teste2
+processo teste2 acabou
+
+processflow> run teste2
+processo teste acabou
+make: *** [Makefile:12: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make runclean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean[2Prun
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K\n",aux->nome,[32m[Kaux->args[m[K);
+      |                                        [01;35m[K~^[m[K              [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                 [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K            [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task teste /bin/ls -l
+
+processflow> tsk    ask teste2 /bin/pwd
+
+processflow> run teste2
+/home/devcontainers/dev/rass/ProcessFlow
+
+processflow> run teste
+total 176
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16768 Aug 19 11:07 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 110592 Aug 19 10:50 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 11:07 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2617 Aug 19 11:06 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4560 Aug 19 11:07 tasks.o
+
+processflow> show
+Processo: teste Ação: �+�;�X
+
+processflow> run teste
+processo teste acabou
+
+processflow> run tete  ste2
+processo teste acabou
+
+processflow> show
+Processo: teste Ação: �+�;�X
+
+processflow> ^Cmake: *** [Makefile:12: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K\n",aux->nome,[32m[Kaux->args[m[K);
+      |                                        [01;35m[K~^[m[K              [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                 [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K            [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task teste /bnin   in/ls -l
+
+processflow> show
+Processo: teste Ação: ���G_
+
+processflow> task teste2 /bin/pwd
+
+processflow> run teste2
+/home/devcontainers/dev/rass/ProcessFlow
+
+processflow> run teste2
+processo teste2 acabou
+
+processflow> run teste
+total 180
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16768 Aug 19 11:10 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 114688 Aug 19 11:10 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 11:10 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2599 Aug 19 11:08 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4560 Aug 19 11:10 tasks.o
+
+processflow> ^Cmake: *** [Makefile:12: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K\n",aux->nome,[32m[Kaux->args[m[K);
+      |                                        [01;35m[K~^[m[K              [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                 [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K            [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> te ask teste /^Bin/      /bin/ls -l
+
+processflow> task teste2 /bin/pwd
+
+processflow> run teste2
+/home/devcontainers/dev/rass/ProcessFlow
+/home/devcontainers/dev/rass/ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make runclean
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clean[2Prun
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K\n",aux->nome,[32m[Kaux->args[m[K);
+      |                                        [01;35m[K~^[m[K              [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                 [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K            [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task teste1 /bin/ls -l
+
+processflow> run teste1
+total 184
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16768 Aug 19 11:22 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 118784 Aug 19 11:22 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 11:22 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2587 Aug 19 11:22 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4592 Aug 19 11:22 tasks.o
+
+processflow> task teste2 /biin  n/pws d
+
+processflow> task teste3 /bin/echo "teste"
+
+processflow> show
+Processo: teste1 Ação: ��@W
+Processo: teste2 Ação: ��@W
+Processo: teste3 Ação: ��@W
+
+processflow> run teste3
+"teste"
+
+processflow> run teste2
+/home/devcontainers/dev/rass/ProcessFlow
+
+processflow> run teste1
+total 184
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16768 Aug 19 11:22 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 118784 Aug 19 11:22 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 11:22 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2587 Aug 19 11:22 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4592 Aug 19 11:22 tasks.o
+
+processflow> run teste1
+total 184
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16768 Aug 19 11:22 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 118784 Aug 19 11:22 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 11:22 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2587 Aug 19 11:22 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4592 Aug 19 11:22 tasks.o
+
+processflow> run teste3
+"teste"
+
+processflow> t run teste2
+/home/devcontainers/dev/rass/ProcessFlow
+
+processflow> show
+Processo: teste1 Ação: ��@W
+Processo: teste2 Ação: ��@W
+Processo: teste3 Ação: ��@W
+
+processflow> ^Cmake: *** [Makefile:12: run] Interrupt
+
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make clena[K[Kan
+[?2004lrm -f *.o a.out ProcessFlow
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c main.c
+gcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K\n",aux->nome,[32m[Kaux->args[m[K);
+      |                                        [01;35m[K~^[m[K              [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                 [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K            [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task tete  ste  1 /bin/ls -l
+
+processflow> show
+Processo: teste1 Ação: �>N�b
+
+processflow> task teste2 /bin/pwd
+
+processflow> run teste1
+total 188
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16808 Aug 19 11:50 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 122880 Aug 19 11:50 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 11:50 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2569 Aug 19 11:27 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4600 Aug 19 11:50 tasks.o
+
+processflow> run teste2
+/home/devcontainers/dev/rass/ProcessFlow
+
+processflow> run teste1
+total 188
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16808 Aug 19 11:50 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 122880 Aug 19 11:50 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 11:50 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2569 Aug 19 11:27 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   4600 Aug 19 11:50 tasks.o
+
+processflow> run teste2
+/home/devcontainers/dev/rass/ProcessFlow
+
+processflow> run teste1
+total 188
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16808 Aug 19 11:50 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 122880 Aug 19 11:50 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 11:50 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   2569 Aug 19 11:27 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 taScript started on 2026-08-19 20:24:57-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="159" LINES="13"]
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make runclean[2Prun
+[?2004l./ProcessFlow
+
+processflow> task teste1 /bin/s ls -l
+
+processflow> ru  task teste2 /bin/pwd
+
+processflow> run sequential teste1 teste2
+total 192
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-xr-x 1 devcontainers devcontainers  16808 Aug 19 11:59 ProcessFlow
+-rw-r--r-- 1 devcontainers devcontainers     13 Aug 17 14:08 README.md
+-rw-r--r-- 1 devcontainers devcontainers 126976 Aug 19 11:50 evidencias.log
+-rw-r--r-- 1 devcontainers devcontainers      6 Aug 19 07:48 file.txt
+-rw-r--r-- 1 devcontainers devcontainers   1114 Aug 19 10:30 main.c
+-rw-r--r-- 1 devcontainers devcontainers   2624 Aug 19 11:59 main.o
+-rw-r--r-- 1 devcontainers devcontainers     39 Aug 17 20:06 run.c
+-rw-r--r-- 1 devcontainers devcontainers      0 Aug 17 15:58 run.h
+-rw-r--r-- 1 devcontainers devcontainers    189 Aug 18 11:08 task.h
+-rw-r--r-- 1 devcontainers devcontainers   3237 Aug 19 11:58 tasks.c
+-rw-r--r-- 1 devcontainers devcontainers    259 Aug 19 10:30 tasks.h
+-rw-r--r-- 1 devcontainers devcontainers   5328 Aug 19 11:59 tasks.o
+/home/devcontainers/dev/rass/ProcessFlow
+make: *** [Makefile:12: run] Segmentation fault (core dumped)
+[?2004h]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ [K]0;devcontainers@PcdeRe28: ~/dev/rass/ProcessFlow[01;32mdevcontainers@PcdeRe28[00m:[01;34m~/dev/rass/ProcessFlow[00m$ make run
+[?2004lgcc -c tasks.c
+[01m[Ktasks.c:[m[K In function ‘[01m[Kshow_task[m[K’:
+[01m[Ktasks.c:58:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 3 has type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   58 |             printf("Processo: %s Ação: [01;35m[K%s[m[K\n",aux->nome,[32m[Kaux->args[m[K);
+      |                                        [01;35m[K~^[m[K              [32m[K~~~~~~~~~[m[K
+      |                                         [01;35m[K|[m[K                 [32m[K|[m[K
+      |                                         [01;35m[Kchar *[m[K            [32m[Kchar **[m[K
+gcc main.o tasks.o -o ProcessFlow
+./ProcessFlow
+
+processflow> task 1   1 /bin/ls -l
+
+processflow> task 2 /i bin/pwd
+
+processflow> run paralel  lel 1 2
+total 192
+-rw-r--r-- 1 devcontainers devcontainers    254 Aug 18 08:32 Makefile
+-rwxr-x

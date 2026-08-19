@@ -12,4 +12,6 @@ void run_task(task **head, char **save, char *comp);
 
 void run_listar();
 
+//void work_dir(char *head);
+
 #endif
