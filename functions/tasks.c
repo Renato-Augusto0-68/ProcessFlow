@@ -65,7 +65,6 @@ void show_task(struct task *head){
 
 void run_task(struct task **head, char **save, char *comp){
     task *aux = *head;
-
     if (strcmp(comp,"sequential")==0 ^ (strcmp(comp,"parallel")==0)){
         if (strcmp(comp,"sequential")==0){
             while(strcmp(comp,aux->nome) && aux!=NULL){
@@ -92,7 +91,10 @@ void run_task(struct task **head, char **save, char *comp){
         }
     }
     if (strcmp(comp, "pipe")==0){
-        // a parte de pipe
+        int fd[2];
+
+
+        
     }
     if (strcmp(comp,"sequential")!=0 && (strcmp(comp,"parallel")!=0)){   
         while(aux!=NULL){
@@ -104,7 +106,10 @@ void run_task(struct task **head, char **save, char *comp){
             aux = aux->next;
         }
         if(aux!=NULL){
-            while(waitpid(aux->id,NULL,WNOHANG)){ int resp = execvp(aux->args[0], aux->args);}
+            if (aux->id!=0){
+                wait(NULL);
+            //while(waitpid(aux->id,NULL,WNOHANG)){ int resp = execvp(aux->args[0], aux->args);}
+            }else{int resp = execvp(aux->args[0], aux->args);}
         }else{
             printf("processo não existe, não é possível executar-lo\n");
 

@@ -30,11 +30,14 @@ int main(){
                 char *comp2 = strtok_r(NULL," \n",&save);
                 run_task(&t,&save, comp2);
             }
-            /*if(strcmp(compare,"workdir")==0){
+            if(strcmp(compare,"workdir")==0){
                 char *comp2 = strtok_r(NULL," \n",&save);
                 work_dir(comp2);
             }
-*/
+            if(strcmp(compare," ")==0){
+                printf("Falha, digite algum comando para executar");
+                
+            }
             if (strcmp(compare,"exit")==0){
                 exit(1);
             }
