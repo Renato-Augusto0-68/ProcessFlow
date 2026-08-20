@@ -14,7 +14,7 @@ int main(){
         struct task *t=NULL;
         char *save=NULL;
         char *tokn=NULL;
-        char command[120];
+        char command[220];
         while(1){
             printf("\nprocessflow> ");
             fgets(command,sizeof(command),stdin);
