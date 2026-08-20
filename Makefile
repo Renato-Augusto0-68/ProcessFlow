@@ -1,12 +1,17 @@
-ProcessFlow: main.o tasks.o
-			gcc main.o tasks.o -o ProcessFlow
+ProcessFlow: main.o functions.o
+			gcc main.o functions.o -o ProcessFlow
 
 main.o: main.c tasks.h task.h
 	gcc -c main.c
 
-tasks.o: tasks.c tasks.h task.h
+functions.o : tasks.o terminal.o
+	gcc -c tasks.o terminal.o
+
+tasks.o: tasks.c tasks.h task.h 
 		gcc -c tasks.c
 
+terminal.o: terminal.c terminal.h task.h
+		gcc -c terminal.c
 
 run: ProcessFlow 
 	./ProcessFlow

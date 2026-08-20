@@ -94,7 +94,7 @@ void run_task(struct task **head, char **save, char *comp){
     if (strcmp(comp, "pipe")==0){
         // a parte de pipe
     }
-    if (strcmp(comp,"sequential")!=0 && (strcmp(comp,"parallel")!=0)){
+    if (strcmp(comp,"sequential")!=0 && (strcmp(comp,"parallel")!=0)){   
         while(aux!=NULL){
         //ou seja aogra preciso poder mover pra onde precisa
             if (strcmp(aux->nome, comp)==0){
@@ -116,3 +116,4 @@ void run_listar(char **head){
     char *arg[] ={"/bin/ls","ls"," -l"};  
     int resp = execvp(arg[0],arg);
 }
+
