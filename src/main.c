@@ -3,8 +3,9 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include "tasks.h"
-#include "task.h"
+#include "functions/tasks.h"
+#include "functions/task.h"
+#include "functions/terminal.h"
 #include <stdlib.h>
 
 

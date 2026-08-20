@@ -1,17 +1,16 @@
-ProcessFlow: main.o functions.o
-			gcc main.o functions.o -o ProcessFlow
+CFLAGS = -I.
 
-main.o: main.c tasks.h task.h
-	gcc -c main.c
+ProcessFlow: src/main.o tasks.o terminal.o
+	gcc src/main.o tasks.o terminal.o -o ProcessFlow
 
-functions.o : tasks.o terminal.o
-	gcc -c tasks.o terminal.o
+src/main.o: src/main.c functions/tasks.h functions/task.h functions/terminal.h
+	gcc $(CFLAGS) -c src/main.c -o src/main.o
 
-tasks.o: tasks.c tasks.h task.h 
-		gcc -c tasks.c
+tasks.o: functions/tasks.c functions/tasks.h functions/task.h
+	gcc $(CFLAGS) -c functions/tasks.c -o tasks.o
 
-terminal.o: terminal.c terminal.h task.h
-		gcc -c terminal.c
+terminal.o: functions/terminal.c functions/terminal.h functions/task.h
+	gcc $(CFLAGS) -c functions/terminal.c -o terminal.o
 
 run: ProcessFlow 
 	./ProcessFlow
