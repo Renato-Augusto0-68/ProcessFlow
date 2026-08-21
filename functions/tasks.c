@@ -98,6 +98,7 @@ void run_task(struct task **head, char **save, char *comp){
     if (strcmp(comp, "pipe")==0){
         task *orig = *head;
         int i=0;
+        comp = strtok_r(NULL," \n",save);
         task *storage[MAX_PIPES];
         //VOU ENCONTRAR OS N PROCESSOS. DPS QUE ENCONTRAR, ARMAZENAR, P DAI RODAR... NO CASO COMO SÃO STRINGS, PRA 'RASTREAR' É MAIS SIMPLES... MAS PRA ITERAR A LISTA ENCADEADA... A PERA AI 
         while(aux!=NULL){
@@ -105,11 +106,15 @@ void run_task(struct task **head, char **save, char *comp){
             if (strcmp(aux->nome, comp)==0){
                 storage[i]=aux;
                 aux = orig;
-                comp = strtok_r(NULL," \n",save);
                 i++;
+                comp = strtok_r(NULL," \n",save);
+                if (comp==NULL){
+                    break;
+                }
             }
             aux = aux->next;
         }
+
         int numb;
         int fd[2];
         int prev_fd=-1;
@@ -137,8 +142,8 @@ void run_task(struct task **head, char **save, char *comp){
                     close(prev_fd);  
                 }
                 if(g<i-1){
-                prev_fd=fd[0];
-                close(fd[1]);
+                    prev_fd=fd[0];
+                    close(fd[1]);
                 }
                 
                            
@@ -147,6 +152,7 @@ void run_task(struct task **head, char **save, char *comp){
         for(int g=0;g<i;g++){
             waitpid(storage[g]->id,NULL,0);
         }
+        return;
     }
     if (strcmp(comp,"pipe")!=0){   
         while(aux!=NULL){
