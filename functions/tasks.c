@@ -73,23 +73,24 @@ void run_task(struct task **head, char **save, char *comp){
                 aux->id = fork();
                 if (aux->id==0){
                     execvp(aux->args[0],aux->args);
-                    exit(0);
                 }
-                wait(NULL);
+                if (aux->id!=0)
+                    wait(NULL);
                 aux=aux->next;
                 comp = strtok_r(NULL," \n",save);
                 
             }
         }else{
-            while(strcmp(comp,aux->nome) && aux!=NULL){
+           while(strcmp(comp,aux->nome) && aux!=NULL){
                 aux->id = fork();
                 if (aux->id==0){
                     execvp(aux->args[0],aux->args);
-                    waitpid(aux->id,NULL,WNOHANG);
                 }
-                aux=aux->next;
-                comp = strtok_r(NULL," \n",save);~
-                wait(NULL);
+                if (aux->id!=0)
+                    wait(NULL);
+                    aux=aux->next;
+                    comp = strtok_r(NULL," \n",save);
+                
             }
         }
     }
@@ -111,35 +112,40 @@ void run_task(struct task **head, char **save, char *comp){
         }
         int numb;
         int fd[2];
+        int prev_fd=-1;
         for (int g=0;g<i;g++){
             if(pipe(fd)==-1){
-                return 1;
+                return ;
             }
-            int id = (storage[g])->id =fork();
-            if (id==-1)
-                return 2;
+            (storage[g])->id = fork();
+            if ((storage[g])->id==-1)
+                return ;
 
-            if (id==0 && g!=(i-1)){
-                dup2(fd[1],STDOUT_FILENO);
-
-                close(fd[0]);
-                close(fd[1]);            
-                int resp = execvp((storage[g])->args[0],(storage[g])->args);
-               
-            }else if(id==0){
-                dup2(fd[0],STDIN_FILENO);
-
-                close(fd[0]);
-                close(fd[1]);            
-                int resp = execvp((storage[g])->args[0],(storage[g])->args);
+            if ((storage[g])->id==0){
+                if (g>0){
+                    dup2(prev_fd,STDIN_FILENO);
+                    close(prev_fd);
+                }
+                if(g<i-1){
+                    dup2(fd[1],STDOUT_FILENO);
+                    close(fd[0]);
+                    close(fd[1]); 
+                } 
+                execvp((storage[g])->args[0],(storage[g])->args);
+            }else{
+                if (g>0){
+                    close(prev_fd);  
+                }
+                if(g<i-1){
+                prev_fd=fd[0];
+                close(fd[1]);
+                }
+                
+                           
             }
         }
         for(int g=0;g<i;g++){
-            close(fd[0]);
-            close(fd[1]);
-        }
-        for(int g=0;g<i;g++){
-            waitpid(storage[g],NULL,0);
+            waitpid(storage[g]->id,NULL,0);
         }
     }
     if (strcmp(comp,"pipe")!=0){   
