@@ -119,8 +119,11 @@ void run_task(struct task **head, char **save, char *comp){
         int fd[2];
         int prev_fd=-1;
         for (int g=0;g<i;g++){
-            if(pipe(fd)==-1){
-                return ;
+            
+            if (g!=(i-1)){
+                if(pipe(fd)==-1){
+                    return ;
+                }
             }
             (storage[g])->id = fork();
             if ((storage[g])->id==-1)
