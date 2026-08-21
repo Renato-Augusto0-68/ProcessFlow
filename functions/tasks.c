@@ -139,7 +139,10 @@ void run_task(struct task **head, char **save, char *comp){
                     close(fd[0]);
                     close(fd[1]); 
                 } 
-                execvp((storage[g])->args[0],(storage[g])->args);
+                if((execvp((storage[g])->args[0],(storage[g])->args))==-1){
+                    printf("encerrando, ocorreu uma falha");
+                    exit(-1);
+                }
             }else{
                 if (g>0){
                     close(prev_fd);  
@@ -148,10 +151,10 @@ void run_task(struct task **head, char **save, char *comp){
                     prev_fd=fd[0];
                     close(fd[1]);
                 }
-                
-                           
             }
         }
+        close(fd[0]);
+        close(fd[1]);
         for(int g=0;g<i;g++){
             waitpid(storage[g]->id,NULL,0);
         }
