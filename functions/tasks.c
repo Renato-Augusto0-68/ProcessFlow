@@ -69,17 +69,32 @@ void run_task(struct task **head, char **save, char *comp){
     
     if (strcmp(comp,"sequential")==0 ^ (strcmp(comp,"parallel")==0)){
         if (strcmp(comp,"sequential")==0){
-            while(strcmp(comp,aux->nome) && aux!=NULL){
-                aux->id = fork();
-                if (aux->id==0){
-                    execvp(aux->args[0],aux->args);
+            task *orig = *head;
+            int i=0;
+            task *storage[MAX_PIPES];
+            comp = strtok_r(NULL," \n",save);
+            while(aux!=NULL){
+                if (strcmp(aux->nome,comp)==0){
+                    storage[i]=aux;
+                    aux = orig;
+                    comp = strtok_r(NULL," \n",save);
+                    i++;
+                    if (comp==NULL){break;}
                 }
-                if (aux->id!=0)
-                    wait(NULL);
-                aux=aux->next;
-                comp = strtok_r(NULL," \n",save);
-                
+                aux=aux->next;                
             }
+            for(int g=0;g<i;g++){
+                (storage[g])->id = fork();
+                if((storage[g])->id==-1)
+                    return;
+                if((storage[g])->id!=0){
+                    execvp((storage[g])->args[0],(storage[g])->args);
+                }
+                if((storage[g])->id!=0){
+                    waitpid((storage[g])->id,NULL,0);
+                }                
+            }
+        return;
         }else{
            while(strcmp(comp,aux->nome) && aux!=NULL){
                 aux->id = fork();
